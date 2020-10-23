@@ -8,7 +8,7 @@ To analyze the data you will need to install some `R` packages. The required pac
 
 ## Execute the Analysis
 
-The project files should be run from the Analysis folder. To execute the analysis, from the command line you can run `make report.html` to compile the final project report. This will create a file called `report.html` output in the Rcode folder that contains the resulting frequency table and histogram.
+The project files should be run from the root folder. To execute the analysis, from the command line you can run `make report.html` to compile the final project report. This will create a file called `report.html` output in the root folder that contains the resulting frequency table and histogram.
 
 ## Additional Help
 
