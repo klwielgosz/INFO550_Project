@@ -13,7 +13,7 @@ RUN mkdir /project/Figures/
 COPY ./ /project/
 
 # make R scripts executable
-RUN chmod +x /project/R/*.R
+RUN chmod +x /project/RCode/*.R
 
 # make container entry point bash
 CMD make -C project report.html
