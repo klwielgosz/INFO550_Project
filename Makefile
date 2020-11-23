@@ -12,11 +12,6 @@ Figures/fig1.png: Rcode/fig1.R Data/LandUse_Clean.csv
 Data/LandUse_Clean.csv: Rcode/cleandata.R Data/LandUse_Future.csv
 	Rscript Rcode/cleandata.R
 
-# rule for installing packages
-.PHONY: install
-install: Rcode/install.R
-	Rscript Rcode/install.R
-
 .PHONY: help
 help: Makefile
 	@sed -n 's/^##//p' $<
