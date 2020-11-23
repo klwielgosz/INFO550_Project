@@ -6,18 +6,15 @@ report.html: Data/LandUse_Clean.csv Figures/fig1.png Rcode/ProjectReport.Rmd
 ## fig1.png: rule for making figure 1
 Figures/fig1.png: Rcode/fig1.R Data/LandUse_Clean.csv
 	cd Rcode &&\
-	chmod +x fig1.R &&\
 	Rscript fig1.R
 	
 ## LandUse_Clean.csv: rule for cleaning data and outputting it in a csv file
 Data/LandUse_Clean.csv: Rcode/cleandata.R Data/LandUse_Future.csv
-	chmod +x Rcode/cleandata.R && \
 	Rscript Rcode/cleandata.R
 
 # rule for installing packages
 .PHONY: install
 install: Rcode/install.R
-	chmod +x Rcode/install.R &&\
 	Rscript Rcode/install.R
 
 .PHONY: help
