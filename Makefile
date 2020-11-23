@@ -1,7 +1,7 @@
 ## report.html: rule for making report  
-report.html: Data/LandUse_Clean.csv Figures/fig1.png RCode/ProjectReport.Rmd
+report.html: Data/LandUse_Clean.csv Figures/fig1.png RCode/report.Rmd
 	cd RCode &&\
-	Rscript -e "rmarkdown::render('ProjectReport.Rmd', output_dir = '../output')"
+	Rscript -e "rmarkdown::render('report.Rmd', output_dir = '../output')"
 	
 ## fig1.png: rule for making figure 1
 Figures/fig1.png: RCode/fig1.R Data/LandUse_Clean.csv RCode/MakeTable.R
