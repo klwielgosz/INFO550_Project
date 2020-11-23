@@ -1,0 +1,20 @@
+---
+title: "Land Use Project"
+author: "Kristina Wielgosz"
+date: "`r format(Sys.Date(), '%Y-%m-%d')`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+source("MakeTable.R")
+```
+
+# Frequency of Land Use Types
+```{r}
+knitr::kable(t_ord, digits = 3)
+```
+
+There are `r nrow(t_ord)` observations. The most common proposed land use type is `r t_ord[1,2]`, while the least common land use types are tied between `r tail(t_ord, n=3L)[1,2]`, `r tail(t_ord, n=3L)[2,2]`, and `r tail(t_ord, n=3L)[3,2]`. A summary graph is shown in figure 1 below.
+
+![Figure 1](../Figures/fig1.png)
