@@ -2,13 +2,17 @@
 
 For my project, I will analyze proposed land use classification in Atlanta as identified during community planning events.
 
-## R Packages
-To analyze the data you will need to install some `R` packages. The required packages can be installed using the command `make install`. The user will be prompted to select a CRAN mirror if packages need to be installed.
+## Pull Docker Image
 
+The docker image can be pulled from Dockerhub using the statement `docker pull final-proj`.
 
-## Execute the Analysis
+## Build Docker Image
 
-The project files should be run from the root folder. To execute the analysis, from the command line you can run `make report.html` to compile the final project report. This will create a file called `report.html` output in the root folder that contains the resulting frequency table and histogram.
+The docker image can be built using `make build`. To enter the docker image and execute the analysis, you can run `docker run -it final-proj /bin/bash` and follow the instructions under Execute the Analysis. Alternatively, a local directory can be mounted to get a local copy of `report.html`. This can be done by running `docker run -it -v ~/INFO550_Project:/project final-proj`, where `INFO550_Project` is the folder containing the project. This will create a directory called `output` that contains `report.html`. The `report.html` can also be generated in the main folder containing the project by running `docker run -it -v ~/INFO550_Project:/project/output final-proj`, where `INFO550_Project` is the folder containing the project.
+
+# Execute the Analysis
+
+The project files should be run from the root folder. To execute the analysis, from the command line you can run `make report.html` to compile the final project report. This will create a file called `report.html` output in the output folder that contains the resulting frequency table and histogram.
 
 ## Additional Help
 
