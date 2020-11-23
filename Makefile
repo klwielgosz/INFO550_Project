@@ -11,6 +11,10 @@ Figures/fig1.png: RCode/fig1.R Data/LandUse_Clean.csv RCode/MakeTable.R
 ## LandUse_Clean.csv: rule for cleaning data and outputting it in a csv file
 Data/LandUse_Clean.csv: RCode/cleandata.R Data/LandUse_Future.csv
 	Rscript RCode/cleandata.R
+	
+## build: rule to build the docker image
+build: Dockerfile
+	docker build -t final-proj .
 
 .PHONY: help
 help: Makefile
