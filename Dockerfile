@@ -7,7 +7,6 @@ RUN Rscript -e "install.packages('ggplot2')"
 # we will mount our local project directory to this directory
 RUN mkdir /project
 RUN mkdir /project/output/
-RUN mkdir /project/Figures/
 
 # copy contents of local folder to project folder in container
 COPY ./ /project/
