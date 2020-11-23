@@ -1,6 +1,6 @@
 ## Land Use Project
 
-For my project, I will analyze proposed land use classification in Atlanta as identified during community planning events.
+For my project, I will analyze proposed land use classification in Atlanta as identified during community planning events. This repository contains data required to run the analysis in the `Data` folder, R code to execute the analysis in the `RCode` folder, and a `Figures` folder to contain generated images. The repository also contains a Dockerfile to create the Docker image, and a Makefile to automate the analysis.
 
 ## Pull Docker Image
 
