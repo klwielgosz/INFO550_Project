@@ -14,7 +14,7 @@ Data/LandUse_Clean.csv: RCode/cleandata.R Data/LandUse_Future.csv
 	
 ## build: rule to build the docker image
 build: Dockerfile
-	docker build -t final-proj .
+	docker build -t klwielgosz/final-proj .
 
 .PHONY: help
 help: Makefile
